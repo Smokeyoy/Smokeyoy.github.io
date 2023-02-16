@@ -4,14 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #rcorners1 {
-            border-radius: 25px;
-            background: #73AD21;
-            padding: 20px;
-            width: 200px;
-            height: 150px;
-        }
-
         body {
             background-color: rgb(255, 177, 177);
         }
@@ -27,6 +19,7 @@
             font: 14px courier;
             text-align: left;
         }
+
         pcenter {
             color: rgb(255, 218, 218);
             font: 20px courier;
@@ -39,35 +32,32 @@
             background-color: rgb(24, 24, 24);
             margin: 1cm;
             background-image: url(assets/photobg.png);
-            background-size:cover;
+            background-size: cover;
             box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(255, 73, 73, 0.829);
             background-attachment: fixed;
-            
-        }
-        div.shadow{
-            box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(255, 73, 73, 0.829);
-        }
-        .mask1 {
 
-            -webkit-mask-image: url(assets/tpfp1.png);
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size: contain;
-            -webkit-mask-position: center;
-            mask-image: url(assets/tpfp1.png);
-            mask-repeat: no-repeat;
-            mask-size: contain;
-            mask-position: center;
-            margin: 1cm;
-            
+        }
+        div.sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 15px;
+            color: rgb(255, 255, 255);
+            font: 40px monoSpace;
+            text-align: center;
+            background-color: #ff7171;
+            margin: 5%;
+            border-radius: 30px;
+            box-shadow: 0 0px 40px 0 #ff4747;
+            text-shadow: 0px 0px 4px #ffffff;
+            z-index: +100
         }
     </style>
 </head>
 
 <body>
     <main>
-        <h1>
-            Smokeyoy
-        </h1>
+        <div class="sticky">Smokeyoy</div>
         <p>
             <a target="_blank" href="https://github.com/Smokeyoy">Smokeyoy</a>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -78,12 +68,10 @@
         </p>
         <div class="box">
             <a href="https://github.com/Smokeyoy"><img src="assets/tpfp-shadow.png" target="_blank" width="300"
-                    height="300" ></a>
+                    height="300"></a>
             <pcenter><br>Click above to access my Github profile</pcenter>
         </div>
-        <div class="mask1">
-            <img src="assets/photobg.png" width="2400">
-        </div>
+        <div style="padding-bottom:600px">
     </main>
 </body>
 
