@@ -42,7 +42,7 @@
             background-size: cover;
             box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(255, 73, 73, 0.829);
             background-attachment: fixed;
-            padding:2%;
+            padding: 2%;
         }
 
         .sticky {
@@ -58,15 +58,24 @@
             box-shadow: 0 0px 40px 0 #ff4747;
             text-shadow: 0px 0px 4px #ffffff;
             z-index: +100;
-            margin: auto;
             margin: 4%;
-            margin-bottom: 10%;
-            overflow-x:scroll;
+            margin-bottom: 6%;
+            overflow-x: scroll;
+            height:60px;
 
         }
 
         div.container {
             width: 600px;
+        }
+
+        .center {
+            margin: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
 
         div.split {
@@ -97,7 +106,7 @@
             border-radius: 30px;
             box-shadow: 0 0px 40px 0 #ff4747;
             text-shadow: 0px 0px 4px #ffffff;
-            padding:1%;
+            padding: 1%;
         }
 
         .box1 {
@@ -138,7 +147,8 @@
     <main>
 
         <div class="sticky">
-            <div class="container">
+            <div class="center">
+                <div class="container">
                 <ul>
                     <div class="split">
                         <li><a class="active" href="/">Home</a></li>
@@ -154,11 +164,12 @@
                     </div>
                 </ul>
             </div>
+            </div>
         </div>
         <div class="box2">
             <div class="box1">
                 <p>
-                    <a target="_blank" href="https://github.com/Smokeyoy"style=" color:#ffffff">Smokeyoy</a>
+                    <a target="_blank" href="https://github.com/Smokeyoy" style=" color:#ffffff">Smokeyoy</a>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
