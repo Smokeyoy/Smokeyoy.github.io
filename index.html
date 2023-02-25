@@ -49,7 +49,7 @@
             position: -webkit-sticky;
             position: sticky;
             top: 0;
-            padding: 2%;
+            padding: 1%;
             color: rgb(255, 255, 255);
             font: 20px monoSpace;
             text-align: center;
@@ -59,9 +59,11 @@
             text-shadow: 0px 0px 4px #ffffff;
             z-index: +100;
             margin: 4%;
+            margin-left:10%;
+            margin-right:10%;
             margin-bottom: 6%;
             overflow-x: scroll;
-            height:60px;
+            height: 60px;
 
         }
 
@@ -131,13 +133,58 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 14%;
+            padding: 10%;
             text-decoration: none;
             width: 110px;
+            transition: 0.3s;
         }
 
         li a:hover {
-            background-color: #ff7a7a;
+            background-color: #ffa6a6;
+            transform: rotate(20deg);
+            -ms-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+
+        }
+
+        #mySidenav a {
+            position: absolute;
+            left: -100px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 100px;
+            text-decoration: none;
+            color: white;
+            border-radius: 0 20px 20px 0;
+            z-index: +201;
+            font: 20px courier;
+
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+            
+        }
+
+        #about {
+            top: 20px;
+            background-color: #ff4747;
+        }
+
+        #blog {
+            top: 80px;
+            background-color: #ff4747;
+        }
+
+        #projects {
+            top: 140px;
+            background-color: #ff4747;
+        }
+
+        #contact {
+            top: 200px;
+            background-color: #ff4747
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -145,27 +192,34 @@
 
 <body>
     <main>
+        <div id="mySidenav" class="sidenav">
+            <a href="#" id="about">About</a>
+            <a href="#" id="blog">Blog</a>
+            <a href="#" id="projects">Projects</a>
+            <a href="#" id="contact">Contact</a>
+        </div>
 
         <div class="sticky">
             <div class="center">
                 <div class="container">
-                <ul>
-                    <div class="split">
-                        <li><a class="active" href="/">Home</a></li>
-                    </div>
-                    <div class="split">
-                        <li><a href="html/about.html">About</a></li>
-                    </div>
-                    <div class="split">
-                        <li><a href="html/contact.html">Contact</a></li>
-                    </div>
-                    <div class="split">
-                        <li><a href="html/hdg.html">HDG</a></li>
-                    </div>
-                </ul>
-            </div>
+                    <ul>
+                        <div class="split">
+                            <li><a class="active" href="/">Home</a></li>
+                        </div>
+                        <div class="split">
+                            <li><a href="html/about.html">About</a></li>
+                        </div>
+                        <div class="split">
+                            <li><a href="html/contact.html">Contact</a></li>
+                        </div>
+                        <div class="split">
+                            <li><a href="html/hdg.html">HDG</a></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
+
         <div class="box2">
             <div class="box1">
                 <p>
@@ -208,6 +262,7 @@
             </div>
             <div class="mask1">
                 <div class="box1">
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -224,7 +279,9 @@
             </div>
         </div>
         <div style="padding-bottom:600px"></div>
+
     </main>
+
 </body>
 
 </html>
