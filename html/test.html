@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .parallax {
+            height: 100vh;
+            overflow-x: hidden;
+            perspective: 1px;
+        }
+
+        .parallax-layer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .layer1 {
+            transform: translateZ(0);
+            
+            
+        }
+
+        .layer2 {
+            transform: translateZ(-1px);
+        }
+
+        .layer3 {
+            transform: translateZ(-2px);
+        }
+
+        div {
+            font-size: 60px;
+            text-align: center;
+        }
+
+        .parallax-layer.layer1 {
+            width: 100%;
+            height: 100rem;
+            background-color: rgb(255, 126, 126);
+        }
+
+        .parallax-layer.layer2 {
+            top: 10rem;
+            width: 100%;
+            height: 50rem;
+            border-radius: 40px;
+            background-color: rgb(255, 88, 88);
+        }
+        
+        .parallax-layer.layer3 {
+            top: 20rem;
+            border-radius: 40px;
+            width: 10000%;
+            left:-1000%;
+            height: 50rem;
+            background-color: rgb(255, 255, 255);
+        }
+        .box{
+            top:20rem;
+            width:100%;
+            background-color:white;
+            padding:10%;
+            
+        }
+
+        #mySidenav a {
+            position: absolute;
+            left: -100px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 100px;
+            text-decoration: none;
+            color: white;
+            border-radius: 0 20px 20px 0;
+            z-index: +201;
+            font: 15px Courier;
+
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+            
+        }
+
+        #about {
+            top: 20px;
+            background-color: #ff4747;
+        }
+
+        #blog {
+            top: 80px;
+            background-color: #ff4747;
+        }
+
+        #projects {
+            top: 140px;
+            background-color: #ff4747;
+        }
+
+        #contact {
+            top: 200px;
+            background-color: #ff4747
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="parallax">
+        <div class="parallax-layer layer1"><p>Title</p>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="#" id="about">About</a>
+            <a href="#" id="blog">Blog</a>
+            <a href="#" id="projects">Projects</a>
+            <a href="#" id="contact">Contact</a>
+        </div>
+        <div class="parallax-layer layer2"><p>Text</p>
+        </div>
+        <div class="parallax-layer layer3">
+            <div class="box">
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
