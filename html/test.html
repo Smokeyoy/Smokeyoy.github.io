@@ -6,6 +6,7 @@
     <style>
         body {
             margin: 0;
+            background-color: rgb(255, 126, 126);
         }
 
         .parallax {
@@ -15,6 +16,7 @@
         }
 
         .parallax-layer {
+            padding-top: 5%;
             position: absolute;
             top: 0;
             right: 0;
@@ -24,8 +26,6 @@
 
         .layer1 {
             transform: translateZ(0);
-            
-            
         }
 
         .layer2 {
@@ -54,21 +54,21 @@
             border-radius: 40px;
             background-color: rgb(255, 88, 88);
         }
-        
+
         .parallax-layer.layer3 {
-            top: 20rem;
+            top: 30rem;
             border-radius: 40px;
-            width: 10000%;
-            left:-1000%;
+            width: 100%;
+            left: -100%;
             height: 50rem;
-            background-color: rgb(255, 255, 255);
         }
-        .box{
-            top:20rem;
-            width:100%;
-            background-color:white;
-            padding:10%;
-            
+
+        .box {
+            top: 20rem;
+            width: 280%;
+            background-color: white;
+            padding: 10%;
+            height: 500rem;
         }
 
         #mySidenav a {
@@ -79,7 +79,7 @@
             width: 100px;
             text-decoration: none;
             color: white;
-            border-radius: 0 20px 20px 0;
+            border-radius: 0 15px 15px 0;
             z-index: +201;
             font: 15px Courier;
 
@@ -87,7 +87,7 @@
 
         #mySidenav a:hover {
             left: 0;
-            
+
         }
 
         #about {
@@ -96,17 +96,29 @@
         }
 
         #blog {
-            top: 80px;
+            top: 70px;
             background-color: #ff4747;
         }
 
         #projects {
-            top: 140px;
+            top: 120px;
             background-color: #ff4747;
         }
 
         #contact {
-            top: 200px;
+            top: 170px;
+            background-color: #ff4747
+        }
+
+        .sidebar {
+            position: absolute;
+            top: 20px;
+            background-color: black;
+            height: 107px;
+            padding: 45px;
+            left: -60px;
+            border-radius: 0 15px 15px 0;
+
             background-color: #ff4747
         }
         
@@ -115,24 +127,62 @@
 </head>
 
 <body>
-    
     <div class="parallax">
-        <div class="parallax-layer layer1"><p>Title</p>
+
+        <div class="parallax-layer layer1">
+            <p>Title</p>
         </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="#" id="about">About</a>
-            <a href="#" id="blog">Blog</a>
-            <a href="#" id="projects">Projects</a>
-            <a href="#" id="contact">Contact</a>
-        </div>
-        <div class="parallax-layer layer2"><p>Text</p>
+
+        <div class="parallax-layer layer2">Hello
         </div>
         <div class="parallax-layer layer3">
             <div class="box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed risus in dui porta elementum. Sed
+                    vehicula ante dignissim lacinia egestas. Integer eget massa tellus. Nunc blandit neque enim, non
+                    faucibus nisl dignissim aliquam. Vestibulum et ipsum eget tellus venenatis bibendum a at arcu.
+                    Quisque congue faucibus nisl, sed tristique eros suscipit nec. Donec quis tincidunt urna. Sed urna
+                    dui, placerat aliquet pulvinar vitae, blandit sed lorem. Curabitur et venenatis nibh, id feugiat
+                    nulla. Suspendisse ac mi diam. Nulla vitae odio metus. Praesent id sagittis dolor, non efficitur
+                    ligula.
+
+                    Fusce suscipit eget felis nec euismod. Maecenas odio lacus, aliquam sit amet libero eget, posuere
+                    dignissim odio. Nunc porta elementum massa, nec facilisis tortor sodales in. Nulla lacus felis,
+                    elementum ac urna a, fringilla ultrices ipsum. Pellentesque dapibus congue fermentum. Praesent
+                    tempus risus eget augue viverra, sed tincidunt lacus posuere. Proin rhoncus nisi libero, vel
+                    ultrices ipsum egestas lobortis. Fusce scelerisque accumsan nisi. Quisque eget felis auctor,
+                    pulvinar elit vel, congue enim. Phasellus tincidunt felis velit, in mollis purus tincidunt sed.
+                    Vestibulum scelerisque ipsum ac pellentesque sagittis. Nam rutrum orci vitae enim volutpat consequat
+                    non id augue. Maecenas purus mi, volutpat sit amet elit id, dapibus pellentesque arcu.
+
+                    Etiam et bibendum tellus. Aliquam at tristique sapien. Mauris lacinia odio erat, et gravida diam
+                    luctus convallis. Phasellus eget velit et arcu placerat lobortis. Curabitur eleifend id elit quis
+                    lobortis. Praesent finibus sapien interdum, ultrices est eget, faucibus erat. Aliquam neque nibh,
+                    fringilla laoreet auctor vestibulum, vestibulum quis nisl.
+
+                    Sed non metus ut massa pretium faucibus. Nam porta, lorem vel sodales sollicitudin, felis mi
+                    dignissim urna, euismod dapibus ante massa vitae odio. Vivamus porttitor tristique mauris, vel
+                    tempus ligula convallis non. Aliquam finibus dui nec nibh ornare, nec scelerisque sem molestie.
+                    Aenean non leo quis massa scelerisque volutpat vel in dolor. Curabitur vel massa nec tellus tempus
+                    tempor. Pellentesque dignissim ex nec augue viverra scelerisque. Pellentesque eget tortor euismod,
+                    efficitur sem at, maximus ipsum.
+
+                    Pellentesque ipsum sem, pretium non turpis eu, hendrerit eleifend neque. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean et porta urna, et lobortis
+                    enim. Aliquam erat volutpat. Nunc molestie consequat erat. Donec non tempus orci. Sed vitae elit
+                    lorem. Aliquam erat volutpat.</p>
             </div>
         </div>
+
     </div>
-    
+    <div class="sidebar">
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="about">About</a>
+        <a href="#" id="blog">Blog</a>
+        <a href="#" id="projects">Projects</a>
+        <a href="#" id="contact">Contact</a>
+    </div>
+
 </body>
 
 </html>

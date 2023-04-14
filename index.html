@@ -3,168 +3,119 @@
 
 <head>
     <title>Smokeyoy</title>
-    <!--<link rel="stylesheet" href="css/styles.css">-->
+
+    <meta name="viewport" content="width=device-width, height=device-height, viewport-fit=cover, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
     <style>
         body {
-            background-color: #ffb1b1;
+            padding: 0px;
+            margin: 0px;
+            background-color: #ff4747;
+        }
+
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1px;
+            -webkit-perspective: 1px;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        div.parallax {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+        }
+
+        div.parallax:after {
+            background-image: url(assets/pfp.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            z-index: -1;
+            content: "";
+            transform: translateZ(-1px) scale(2);
+            -webkit-transform: translateZ(-1px) scale(2);
         }
 
         h1 {
-            color: rgb(255, 79, 79);
-            font: 40px monoSpace;
-            text-align: center;
+            width: 60%;
+            font-family: "Courier";
+            font-size: 100pt;
+            color: #ffffff;
+            text-shadow: 0px 0px 20px #000000;
+            text-align: right;
+            padding: 20vh 175px;
+            margin: 0px;
+            float: right;
         }
 
-        p {
-            color: rgb(255, 255, 255);
-            font: 14px courier;
-            text-align: left;
+        div.content-outer {
+            width: 100%;
+            background-color: white;
+            perspective: 2px;
+            -webkit-perspective: 2px;
         }
 
-        pcenter {
-            color: rgb(255, 218, 218);
-            font: 20px courier;
-            text-align: center;
-            text-shadow: 0px 0px 4px #ffffff;
-        }
-
-        .line {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .box {
-            text-align: center;
-            border-radius: 30px;
-            background-color: rgb(24, 24, 24);
-            margin: 4%;
-            background-image: url(assets/photobg.png);
-            background-size: cover;
-            box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(255, 73, 73, 0.829);
-            background-attachment: fixed;
-            padding: 2%;
-        }
-
-        .sticky {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            padding: 1%;
-            color: rgb(255, 255, 255);
-            font: 20px monoSpace;
-            text-align: center;
-            background-color: #ff7171;
-            border-radius: 30px;
-            box-shadow: 0 0px 40px 0 #ff4747;
-            text-shadow: 0px 0px 4px #ffffff;
-            z-index: +100;
-            margin: 4%;
-            margin-left:10%;
-            margin-right:10%;
-            margin-bottom: 6%;
-            overflow-x: scroll;
-            height: 60px;
-
-        }
-
-        div.container {
-            width: 600px;
-        }
-
-        .center {
-            margin: 5px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
-
-        div.split {
-            box-sizing: border-box;
-            width: 25%;
-            float: left;
-        }
-
-        .mask1 {
-            border-radius: 30px;
-            max-width: 600px;
-            height: 200px;
-            overflow-y: scroll;
-            background: url(assets/photobg.png) no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgba(255, 73, 73, 0.829);
-            margin: 4%;
-
-
-        }
-
-        .box2 {
-            color: rgb(255, 255, 255);
-            font: 40px monoSpace;
-            background-color: #ff7171;
-            margin: 4%;
-            border-radius: 30px;
-            box-shadow: 0 0px 40px 0 #ff4747;
-            text-shadow: 0px 0px 4px #ffffff;
-            padding: 1%;
-        }
-
-        .box1 {
-            margin: 1cm;
-
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-
-        }
-
-        li {
-            float: left;
-        }
-
-        li a {
-            border-radius: 20px;
+        div.content-inner {
+            width: 1200px;
+            font-family: "Arial";
+            font-size: 13pt;
+            color: #333;
+            line-height: 1.40em;
+            padding: 50px 20px;
+            margin: 0px auto;
             display: block;
-            color: white;
-            text-align: center;
-            padding: 10%;
-            text-decoration: none;
-            width: 110px;
-            transition: 0.3s;
         }
 
-        li a:hover {
-            background-color: #ffa6a6;
-            transform: rotate(20deg);
-            -ms-transform: scale(1.1);
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+        @media (max-width: 768px) {
+            h1 {
+                width: 88%;
+                font-size: 50pt;
+                padding: 10vh 20px;
+                float: none;
+            }
 
+            div.content-inner {
+                width: 80%;
+                text-align: justify;
+                padding: 20px 0px;
+            }
         }
 
         #mySidenav a {
             position: absolute;
-            left: -100px;
+            left: -120px;
             transition: 0.3s;
             padding: 15px;
-            width: 100px;
+            width: 120px;
             text-decoration: none;
             color: white;
-            border-radius: 0 20px 20px 0;
+            border-radius: 0 15px 15px 0;
             z-index: +201;
-            font: 20px courier;
+            font: 15px Courier;
+            text-align: right;
+            box-shadow: 0 0px 30px 0 #ff4747;
 
         }
 
+
         #mySidenav a:hover {
             left: 0;
-            
         }
 
         #about {
@@ -173,114 +124,188 @@
         }
 
         #blog {
-            top: 80px;
+            top: 70px;
             background-color: #ff4747;
         }
 
         #projects {
-            top: 140px;
+            top: 120px;
             background-color: #ff4747;
         }
 
         #contact {
-            top: 200px;
+            top: 170px;
             background-color: #ff4747
         }
+
+        .sidebar {
+
+            position: absolute;
+            top: 20px;
+            background-color: black;
+            height: 107px;
+            padding: 45px;
+            left: -60px;
+            border-radius: 0 15px 15px 0;
+            background-color: #ff4747;
+
+
+        }
+        .navbar {
+            
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            padding: 1%;
+            color: rgb(255, 255, 255);
+            font: 20px monoSpace;
+            text-align: center;
+            background-color: #ff4747;
+            box-shadow: 0 0px 30px 0 #ff4747;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            z-index: +500;
+            height:50px;
+
+        }
+        .navbar a {
+            text-shadow: 0px 0px 4px #ffffff;
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 15px;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            
+        }
+
+        .dropdown .dropbtn {
+            
+            text-shadow: 0px 0px 4px #ffffff;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            border-radius: 15px;
+            
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            color:#000000;
+            text-shadow: 0px 0px 4px #000000;
+            transition:0.2s;
+            
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <main>
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax">
+        <h1>Text</h1>
+    </div>
+
+    <div class="content-outer">
+        <div class="content-inner">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed risus in dui porta elementum. Sed
+                vehicula ante dignissim lacinia egestas. Integer eget massa tellus. Nunc blandit neque enim, non
+                faucibus nisl dignissim aliquam. Vestibulum et ipsum eget tellus venenatis bibendum a at arcu. Quisque
+                congue faucibus nisl, sed tristique eros suscipit nec. Donec quis tincidunt urna. Sed urna dui, placerat
+                aliquet pulvinar vitae, blandit sed lorem. Curabitur et venenatis nibh, id feugiat nulla. Suspendisse ac
+                mi diam. Nulla vitae odio metus. Praesent id sagittis dolor, non efficitur ligula.</p>
+
+            <p>Fusce suscipit eget felis nec euismod. Maecenas odio lacus, aliquam sit amet libero eget, posuere
+                dignissim odio. Nunc porta elementum massa, nec facilisis tortor sodales in. Nulla lacus felis,
+                elementum ac urna a, fringilla ultrices ipsum. Pellentesque dapibus congue fermentum. Praesent tempus
+                risus eget augue viverra, sed tincidunt lacus posuere. Proin rhoncus nisi libero, vel ultrices ipsum
+                egestas lobortis. Fusce scelerisque accumsan nisi. Quisque eget felis auctor, pulvinar elit vel, congue
+                enim. Phasellus tincidunt felis velit, in mollis purus tincidunt sed. Vestibulum scelerisque ipsum ac
+                pellentesque sagittis. Nam rutrum orci vitae enim volutpat consequat non id augue. Maecenas purus mi,
+                volutpat sit amet elit id, dapibus pellentesque arcu.</p>
+
+            <p>Etiam et bibendum tellus. Aliquam at tristique sapien. Mauris lacinia odio erat, et gravida diam luctus
+                convallis. Phasellus eget velit et arcu placerat lobortis. Curabitur eleifend id elit quis lobortis.
+                Praesent finibus sapien interdum, ultrices est eget, faucibus erat. Aliquam neque nibh, fringilla
+                laoreet auctor vestibulum, vestibulum quis nisl.</p>
+
+            <p>Sed non metus ut massa pretium faucibus. Nam porta, lorem vel sodales sollicitudin, felis mi dignissim
+                urna, euismod dapibus ante massa vitae odio. Vivamus porttitor tristique mauris, vel tempus ligula
+                convallis non. Aliquam finibus dui nec nibh ornare, nec scelerisque sem molestie. Aenean non leo quis
+                massa scelerisque volutpat vel in dolor. Curabitur vel massa nec tellus tempus tempor. Pellentesque
+                dignissim ex nec augue viverra scelerisque. Pellentesque eget tortor euismod, efficitur sem at, maximus
+                ipsum.</p>
+
+            <p>Pellentesque ipsum sem, pretium non turpis eu, hendrerit eleifend neque. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia curae; Aenean et porta urna, et lobortis enim. Aliquam
+                erat volutpat. Nunc molestie consequat erat. Donec non tempus orci. Sed vitae elit lorem. Aliquam erat
+                volutpat.</p>
+        </div>
+
+        <div class="sidebar">
+        </div>
         <div id="mySidenav" class="sidenav">
-            <a href="#" id="about">About</a>
-            <a href="#" id="blog">Blog</a>
-            <a href="#" id="projects">Projects</a>
-            <a href="#" id="contact">Contact</a>
+            <a href="#" id="about">About | ●</a>
+            <a href="#" id="blog">Blog | ●</a>
+            <a href="#" id="projects">Projects | ●</a>
+            <a href="#" id="contact">Contact | ●</a>
+
         </div>
 
-        <div class="sticky">
-            <div class="center">
-                <div class="container">
-                    <ul>
-                        <div class="split">
-                            <li><a class="active" href="/">Home</a></li>
-                        </div>
-                        <div class="split">
-                            <li><a href="html/about.html">About</a></li>
-                        </div>
-                        <div class="split">
-                            <li><a href="html/contact.html">Contact</a></li>
-                        </div>
-                        <div class="split">
-                            <li><a href="html/hdg.html">HDG</a></li>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="box2">
-            <div class="box1">
-                <p>
-                    <a target="_blank" href="https://github.com/Smokeyoy" style=" color:#ffffff">Smokeyoy</a>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip
-                    ex
-                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                    eu
-                    fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit
-                    anim id est laborum.
-                </p>
-            </div>
-        </div>
-        <div class="box">
-            <a href="https://github.com/Smokeyoy"><img src="assets/tpfp-shadow.png" target="_blank" width="300"
-                    height="300"></a>
-            <pcenter><br>Lorem ipsum dolor sit amet</pcenter>
-        </div>
-        <div class="line">
-            <div class="mask1">
-                <div class="box1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia
-                        deserunt
-                        mollit anim id est laborum.</p>
-                </div>
-                <div style="padding-bottom:200px"></div>
-            </div>
-            <div class="mask1">
-                <div class="box1">
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex
-                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia
-                        deserunt
-                        mollit anim id est laborum.</p>
-                </div>
-                <div style="padding-bottom:200px"></div>
-            </div>
-        </div>
-        <div style="padding-bottom:600px"></div>
-
-    </main>
+    </div>
 
 </body>
 
