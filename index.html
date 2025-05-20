@@ -152,59 +152,6 @@
 
         /* END DROPDOWN */
 
-        /* Logo */
-        .logobox {
-            margin: 6px;
-            width: 50px;
-            float: right;
-            overflow: hidden;
-        }
-
-        .logo {
-            padding: 6px 10px;
-            width: 30px;
-            float: right;
-            pointer-events: all;
-        }
-
-        .logo:hover {
-            transform: scale(1.1);
-            transition: 0.2s ease-in-out;
-        }
-
-        .logo:not(:hover) {
-            transition: 0.2s;
-        }
-
-        .logo:active {
-            transform: scale(0.9);
-            transition: 0.2s ease-in-out;
-        }
-
-        .text {
-            opacity: 0;
-            float: right;
-            padding: 5px;
-            width: 50px;
-            pointer-events: none;
-            transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
-            transform: translatex(10px);
-        }
-
-        .logobox:hover {
-            width: 120px;
-        }
-
-        .logobox:not(:hover) {
-            width: 50px;
-            transition: .2s .2s;
-        }
-
-        .logobox:hover .text {
-            opacity: 1;
-            pointer-events: none;
-            transform: translateY(0px);
-        }
     </style>
 </head>
 
@@ -215,18 +162,13 @@
         <div class="dropdown">
             <button class="dropbtn">Project Showcase</button>
             <div class="dropdown-content">
-                <a href="#showcase">Performance Task</a>
-                <a href="#showcase">Password Generator</a>
-                <a href="#showcase">Game Design</a>
+                <a href="showcase">Performance Task</a>
+                <a href="showcase">Password Generator</a>
+                <a href="showcase">Game Design</a>
             </div>
         </div>
-        <a href="contact">Code</a>
+        <a href="code">Code</a>
         <a href="reflection">Reflection</a>
-
-        <div class="logobox">
-            <img src="assets/camera.png" alt="logo" class="logo">
-            <img src="assets/text.png" alt="logo" class="text">
-        </div>
     </div>
     <!-- END NAV -->
 
