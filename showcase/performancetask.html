@@ -186,7 +186,7 @@
 </head>
 
 
-<body>
+<body class="prevent-select">
     <!-- NAV -->
     <div class="navbar">
         <a href="../">Home</a>
@@ -214,7 +214,7 @@
         <br>Code
     </p>
     <div class="container">
-<blockquote><pre style="margin:0px;"><code>def choice():
+<blockquote><pre class="allow-select" style="margin:0px;"><code>def choice():
     decide = int(input("1. Convert from USD to ___\n2. Convert from ___ to USD\nEnter your choice: "))
     currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
     return currency.lower(), decide
