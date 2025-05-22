@@ -183,7 +183,10 @@
         </p>
         <p style="font-size: 15px; margin-top: 3px; color:#ffffffd4;">loops, functions, conditionals and list manipulation</p>
     </div>
-    
+    <p style="margin-bottom: 0px; color:#ff6893;">
+        <br>Encryption/Decryption
+    </p>
+    <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses conditionals and loops to encrypt and decrypt messages.</p>
     <div class="container">
         <blockquote style="background-color: white; border-radius: 5px; padding: 20px;"><pre style="margin:0px;"><code>
 answer = input("(E) Encrypt Message\n
@@ -218,6 +221,10 @@ while (answer != "Q"):
               </code></pre></blockquote>
     </div>
 
+    <p style="margin-bottom: 0px; color:#ff6893;">
+        <br>String Manipulation
+    </p>
+    <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses loops and conditionals.</p>
     <div class="container">
         <blockquote style="background-color: white; border-radius: 5px; padding: 20px;"><pre style="margin:0px;"><code>
 while True:
@@ -275,12 +282,60 @@ if choice == "G":
 if choice == "H":
     text = input("Enter a SINGLE letter: ")
     print(ord(text))
-    print("Example: \n A", ord("A"), "\n a", ord("a"), "\n Z", ord("Z"), "\n z", ord("z"))
+    print("Example: \n A", ord("A"), "\n a", 
+    ord("a"), "\n Z", ord("Z"), "\n z", ord("z"))
 
 if choice == "I":
     num = int(input("Enter a SINGLE number: "))
     print(chr(num))
-    print("Example: \n 65", chr(65), "\n 97", chr(97), "\n 90", chr(90), "\n 122", chr(122))
+    print("Example: \n 65", chr(65), "\n 97", chr(97), "\n
+    90", chr(90), "\n 122", chr(122))
+              </code></pre></blockquote>
+    </div>
+
+    <p style="margin-bottom: 0px; color:#ff6893;">
+        <br>Money Conversion
+    </p>
+    <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment from my Performance Task uses loops, conditionals and list manipulation.</p>
+    <div class="container">
+        <blockquote style="background-color: white; border-radius: 5px; padding: 20px;"><pre style="margin:0px;"><code>
+def choice():
+decide = int(input("1. Convert from USD to ___\n2. Convert from ___ to USD\nEnter your choice: "))
+currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
+return currency.lower(), decide
+
+def amountConvert(index):
+for group in currencyList:
+    if currency == group[0]:
+    name = group[3]
+if decide == 1:
+    amount = float(input("Enter the amount of Dollars to convert to "+ name +": "))
+    return (amount * index)
+else:
+    amount = float(input("Enter the amount of "+ name +" to convert to Dollars: "))
+    return (amount / index)
+
+index = 0
+name = ""
+
+currencyList = [["gbp", 0.76, "£", "Pounds"],
+                ["eur", 0.88, "€", "Euros"],
+                ["jpy", 113.53, "¥", "Yen"],
+                ["cad", 1.39, "C$", "Canadian Dollars"],
+                ["iqd",1309.68, "IQD", "Iraqi Dinars"]]
+
+while True:
+currency, decide = choice()
+for group in currencyList:
+    if currency == group[0]:
+    index = currencyList.index(group)
+
+if decide == 2:
+    print("$", round(amountConvert(float(currencyList[index][1])), 2))
+
+else:
+    print(currencyList[index][2], round(amountConvert(float(currencyList[index][1])), 2))
+print("")
               </code></pre></blockquote>
     </div>
 </body>
