@@ -54,6 +54,12 @@
             user-select: none; /* Standard syntax */
         }
 
+        .allow-select {
+            -webkit-user-select: text; /* Safari */
+            -ms-user-select: text; /* IE 10 and IE 11 */
+            user-select: text; /* Standard syntax */
+        }
+
         /* LIST */
         .navbar {
             font-family: 'Trebuchet MS', sans-serif;
@@ -179,7 +185,7 @@
     </style>
 </head>
 
-<body>
+<body class="prevent-select">
     <!-- NAV -->
     <div class="navbar">
         <a href="../">Home</a>
@@ -197,7 +203,7 @@
     <!-- END NAV -->
 
     <div>
-        <h1 class="prevent-select">Code</h1>
+        <h1>Code</h1>
         <p style='margin-bottom: 0px;'>
             Sections of code that demonstrate use of:
         </p>
@@ -208,7 +214,7 @@
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses conditionals and loops to encrypt and decrypt messages.</p>
     <div class="container">
-<blockquote><pre style="margin:0px;"><code>answer = input("(E) Encrypt Message\n
+<blockquote><pre class="allow-select" style="margin:0px;"><code>answer = input("(E) Encrypt Message\n
 (D) Decrypt Message\n(Q) Quit\nEnter your choice: ")
 while (answer != "Q"):
     message = input("Enter the message: ")
@@ -244,7 +250,7 @@ while (answer != "Q"):
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses loops and conditionals.</p>
     <div class="container">
-<blockquote><pre style="margin:0px;"><code>while True:
+<blockquote><pre class="allow-select" style="margin:0px;"><code>while True:
 choice = input("\nA) STRING TO VARIABLE\n
 B) INTEGER TO VARIABLE\n
 C) LOOP OVER STRING CHARACTERS\n
@@ -314,7 +320,7 @@ if choice == "I":
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment from my Performance Task uses loops, conditionals and list manipulation.</p>
     <div class="container">
-<blockquote><pre style="margin:0px;"><code>def choice():
+<blockquote><pre class="allow-select" style="margin:0px;"><code>def choice():
 decide = int(input("1. Convert from USD to ___\n2. Convert from ___ to USD\nEnter your choice: "))
 currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
 return currency.lower(), decide
