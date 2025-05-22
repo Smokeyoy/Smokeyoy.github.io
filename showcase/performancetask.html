@@ -184,48 +184,48 @@
         </p>
         <p style="font-size: 15px; margin-top: 3px; color:#ffffffd4; padding-left: 20%; max-width: 60%;">The AP Computer Science Principles Create performance task is part of the AP Exam. Students will be provided at least 9 hours in class to complete the performance task. The Create performance task focuses on the creation of a computer program and students will develop a Personalized Project Reference that contains their computer code. On the end-of-course exam, students will respond to two questions related to the code contained in their Personalized Project Reference.</p>
     </div>
-    <p>
+    <p style="margin-bottom: 0px;">
         <br>Code
     </p>
     <div class="container">
         <blockquote style="background-color: white; border-radius: 5px; padding: 5px;"><pre><code>
-            def choice():
-            decide = int(input("1. Convert from USD to ___\n2. Convert from ___ to USD\nEnter your choice: "))
-            currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
-            return currency.lower(), decide
+def choice():
+    decide = int(input("1. Convert from USD to ___\n2. Convert from ___ to USD\nEnter your choice: "))
+    currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
+    return currency.lower(), decide
+
+def amountConvert(index):
+for group in currencyList:
+    if currency == group[0]:
+    name = group[3]
+if decide == 1:
+    amount = float(input("Enter the amount of Dollars to convert to "+ name +": "))
+    return (amount * index)
+else:
+    amount = float(input("Enter the amount of "+ name +" to convert to Dollars: "))
+    return (amount / index)
           
-          def amountConvert(index):
-            for group in currencyList:
-              if currency == group[0]:
-                name = group[3]
-            if decide == 1:
-              amount = float(input("Enter the amount of Dollars to convert to "+ name +": "))
-              return (amount * index)
-            else:
-              amount = float(input("Enter the amount of "+ name +" to convert to Dollars: "))
-              return (amount / index)
+index = 0
+name = ""
+
+currencyList = [["gbp", 0.76, "£", "Pounds"],
+                ["eur", 0.88, "€", "Euros"],
+                ["jpy", 113.53, "¥", "Yen"],
+                ["cad", 1.39, "C$", "Canadian Dollars"],
+                ["iqd",1309.68, "IQD", "Iraqi Dinars"]]
           
-          index = 0
-          name = ""
-          
-          currencyList = [["gbp", 0.76, "£", "Pounds"],
-                          ["eur", 0.88, "€", "Euros"],
-                          ["jpy", 113.53, "¥", "Yen"],
-                          ["cad", 1.39, "C$", "Canadian Dollars"],
-                          ["iqd",1309.68, "IQD", "Iraqi Dinars"]]
-          
-          while True:
-            currency, decide = choice()
-            for group in currencyList:
-              if currency == group[0]:
-                index = currencyList.index(group)
-            
-            if decide == 2:
-              print("$", round(amountConvert(float(currencyList[index][1])), 2))
-            
-            else:
-              print(currencyList[index][2], round(amountConvert(float(currencyList[index][1])), 2))
-            print("")</code></pre></blockquote>
+while True:
+currency, decide = choice()
+for group in currencyList:
+    if currency == group[0]:
+    index = currencyList.index(group)
+
+if decide == 2:
+    print("$", round(amountConvert(float(currencyList[index][1])), 2))
+
+else:
+    print(currencyList[index][2], round(amountConvert(float(currencyList[index][1])), 2))
+print("")</code></pre></blockquote>
     </div>
     <p>
         <br>Video
