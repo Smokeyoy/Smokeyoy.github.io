@@ -188,10 +188,28 @@
             color:white;
         }
         /* END BLOCKQUOTE */
+       
+        /* BUTTON */
+
+        button {
+            color: #f2f2f2;
+            background-color: #ffffff00;
+            border: none;
+        }
+
+        svg:hover {
+            fill: #ff6893;
+            transition: 0.2s;
+            transform: scale(1.2); 
+        }
+
+        svg:not(:hover) {
+            transition: 0.2s;
+        }
+        
 
     </style>
 </head>
-
 <body class="prevent-select">
     <!-- NAV -->
     <div class="navbar">
@@ -221,45 +239,46 @@
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses conditionals and loops to encrypt and decrypt messages.</p>
     <div class="container">
-<blockquote><pre class="allow-select" style="margin:0px;"><code id="one">answer = input("(E) Encrypt Message\n(D) 
-    Decrypt Message\n(Q) Quit\nEnter your choice: ")
-    while (answer != "Q"):
-      message = input("Enter the message: ")
-      value = input("Enter the shift value: ")
-      if (answer == "E"):
-        ans = ""
-        for i in range(len(message)):
-          ch = message[i]
-          if ch==" ":
-            ans+=" "
-          elif ch.isupper():
-            ans += chr((ord(ch) + int(value) - 65) % 26 + 65)
-          else:
-            ans += chr((ord(ch) + int(value) - 97) % 26 + 97)
-        print("Encrypted message: " + ans)
-      elif (answer == "D"):
-        ans = ""
-        for i in range(len(message)):
-          ch = message[i]
-          if ch==" ":
-            ans+=" "
-          elif ch.isupper():
-            ans += chr((ord(ch) - int(value) - 65) % 26 + 65)
-          else:
-            ans += chr((ord(ch) - int(value) - 97) % 26 + 97)
-        print("Decrypted message: " + ans)
-      answer = input("(E) Encrypt Message\n(D) 
-      Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
-      <p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>
-      <button onclick="copyToClipboard('one')">Copy</button>
+<blockquote><pre class="allow-select" style="margin:0px;"><code id="one">answer = input("(E) Encrypt Message\n(D) Decrypt Message\n(Q) Quit\nEnter your choice: ")
+while (answer != "Q"):
+  message = input("Enter the message: ")
+  value = input("Enter the shift value: ")
+  if (answer == "E"):
+    ans = ""
+    for i in range(len(message)):
+      ch = message[i]
+      if ch==" ":
+        ans+=" "
+      elif ch.isupper():
+        ans += chr((ord(ch) + int(value) - 65) % 26 + 65)
+      else:
+        ans += chr((ord(ch) + int(value) - 97) % 26 + 97)
+    print("Encrypted message: " + ans)
+  elif (answer == "D"):
+    ans = ""
+    for i in range(len(message)):
+      ch = message[i]
+      if ch==" ":
+        ans+=" "
+      elif ch.isupper():
+        ans += chr((ord(ch) - int(value) - 65) % 26 + 65)
+      else:
+        ans += chr((ord(ch) - int(value) - 97) % 26 + 97)
+    print("Decrypted message: " + ans)
+  answer = input("(E) Encrypt Message\n(D) Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
+      <p style="font-size:12px; margin-top: 0px;">Copy<button onclick="copyToClipboard('one')"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-copy" viewBox="0 0 16 16"><path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg></button>and click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>    
     </div>
 
+
+
+<!-- Second Code Segment -->
+ 
     <p style="margin-bottom: 0px; color:#ff6893;">
         <br>String Manipulation
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses loops and conditionals.</p>
     <div class="container">
-<blockquote><pre class="allow-select" style="margin:0px;"><code>while True:
+<blockquote><pre class="allow-select" style="margin:0px;"><code id="two">while True:
     choice = input("\nA) STRING TO VARIABLE\n
     B) INTEGER TO VARIABLE\n
     C) LOOP OVER STRING CHARACTERS\n
@@ -322,7 +341,7 @@
         print(chr(num))
         print("Example: \n 65", chr(65), "\n 97", chr(97), "\n90", 
         chr(90), "\n 122", chr(122))</code></pre></blockquote>
-        <p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>
+        <p style="font-size:12px; margin-top: 0px;">Copy<button onclick="copyToClipboard('two')"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-copy" viewBox="0 0 16 16"><path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg></button>and click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>    
     </div>
 
 
@@ -332,7 +351,7 @@
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment from my Performance Task uses loops, conditionals and list manipulation.</p>
     <div class="container">
-<blockquote><pre class="allow-select" style="margin:0px;"><code>def choice():
+<blockquote><pre class="allow-select" style="margin:0px;"><code id="three">def choice():
 decide = int(input("1. Convert from USD to ___\n2. Convert from ___ to USD\nEnter your choice: "))
 currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
 return currency.lower(), decide
@@ -369,8 +388,8 @@ if decide == 2:
 else:
     print(currencyList[index][2], round(amountConvert(float(currencyList[index][1])), 2))
 print("")</code></pre></blockquote>
-<p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>
-    </div>
+<p style="font-size:12px; margin-top: 0px;">Copy<button onclick="copyToClipboard('three')"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-copy" viewBox="0 0 16 16"><path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg></button>and click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>    
+</div>
 </body>
 
 </html>
