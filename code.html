@@ -214,35 +214,36 @@
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses conditionals and loops to encrypt and decrypt messages.</p>
     <div class="container">
-<blockquote><pre class="allow-select" style="margin:0px;"><code>answer = input("(E) Encrypt Message\n
-(D) Decrypt Message\n(Q) Quit\nEnter your choice: ")
-while (answer != "Q"):
-    message = input("Enter the message: ")
-    value = input("Enter the shift value: ")
-    if (answer == "E"):
-    ans = ""
-    for i in range(len(message)):
-        ch = message[i]
-        if ch==" ":
-        ans+=" "
-        elif ch.isupper():
-        ans += chr((ord(ch) + int(value) - 65) % 26 + 65)
-        else:
-        ans += chr((ord(ch) + int(value) - 97) % 26 + 97)
-    print("Encrypted message: " + ans)
-    elif (answer == "D"):
-    ans = ""
-    for i in range(len(message)):
-        ch = message[i]
-        if ch==" ":
-        ans+=" "
-        elif ch.isupper():
-        ans += chr((ord(ch) - int(value) - 65) % 26 + 65)
-        else:
-        ans += chr((ord(ch) - int(value) - 97) % 26 + 97)
-    print("Decrypted message: " + ans)
-    answer = input("(E) Encrypt Message\n
-    (D) Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
+<blockquote><pre class="allow-select" style="margin:0px;"><code>answer = input("(E) Encrypt Message\n(D) 
+    Decrypt Message\n(Q) Quit\nEnter your choice: ")
+    while (answer != "Q"):
+      message = input("Enter the message: ")
+      value = input("Enter the shift value: ")
+      if (answer == "E"):
+        ans = ""
+        for i in range(len(message)):
+          ch = message[i]
+          if ch==" ":
+            ans+=" "
+          elif ch.isupper():
+            ans += chr((ord(ch) + int(value) - 65) % 26 + 65)
+          else:
+            ans += chr((ord(ch) + int(value) - 97) % 26 + 97)
+        print("Encrypted message: " + ans)
+      elif (answer == "D"):
+        ans = ""
+        for i in range(len(message)):
+          ch = message[i]
+          if ch==" ":
+            ans+=" "
+          elif ch.isupper():
+            ans += chr((ord(ch) - int(value) - 65) % 26 + 65)
+          else:
+            ans += chr((ord(ch) - int(value) - 97) % 26 + 97)
+        print("Decrypted message: " + ans)
+      answer = input("(E) Encrypt Message\n(D) 
+      Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
+      <p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/">here</a> to test</p>
     </div>
 
     <p style="margin-bottom: 0px; color:#ff6893;">
@@ -313,6 +314,7 @@ while (answer != "Q"):
         print(chr(num))
         print("Example: \n 65", chr(65), "\n 97", chr(97), "\n90", 
         chr(90), "\n 122", chr(122))</code></pre></blockquote>
+        <p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/">here</a> to test</p>
     </div>
 
 
@@ -359,6 +361,7 @@ if decide == 2:
 else:
     print(currencyList[index][2], round(amountConvert(float(currencyList[index][1])), 2))
 print("")</code></pre></blockquote>
+<p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/">here</a> to test</p>
     </div>
 </body>
 
