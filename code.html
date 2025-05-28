@@ -6,6 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abby's Code</title>
+    <script>
+        function copyToClipboard(elmId) {
+            var text = document.getElementById(elmId).innerHTML;
+            navigator.clipboard.writeText(text);
+          }
+         
+    </script>
     <style>
         html {
             scroll-behavior: smooth;
@@ -214,7 +221,7 @@
     </p>
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses conditionals and loops to encrypt and decrypt messages.</p>
     <div class="container">
-<blockquote><pre class="allow-select" style="margin:0px;"><code>answer = input("(E) Encrypt Message\n(D) 
+<blockquote><pre class="allow-select" style="margin:0px;"><code id="one">answer = input("(E) Encrypt Message\n(D) 
     Decrypt Message\n(Q) Quit\nEnter your choice: ")
     while (answer != "Q"):
       message = input("Enter the message: ")
@@ -244,6 +251,7 @@
       answer = input("(E) Encrypt Message\n(D) 
       Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
       <p style="font-size:12px; margin-top: 0px;">Click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>
+      <button onclick="copyToClipboard('one')">Copy</button>
     </div>
 
     <p style="margin-bottom: 0px; color:#ff6893;">
