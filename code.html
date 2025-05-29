@@ -280,59 +280,57 @@ while (answer != "Q"):
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses loops and conditionals.</p>
     <div class="container">
 <blockquote><pre class="allow-select" style="margin:0px;"><code id="two">while True:
-    choice = input("\nA) STRING TO VARIABLE\n B) INTEGER TO VARIABLE\n C) LOOP OVER STRING CHARACTERS\n D) CHECK IF LETTER\n E) CHECK IF UPPER/LOWER\n F) CHECK IS POSITIVE OR NEGATIVE\n G) CHECK IF ODD/EVEN\n H) FIND ASCII VALUE FROM STRING\n I) FIND STRING FROM ASCII\n Enter your choice: ")
-
+    choice = input("\nA) STRING TO VARIABLE\nB) INTEGER TO VARIABLE\nC) LOOP OVER STRING CHARACTERS\nD) CHECK IF LETTER\nE) CHECK IF UPPER/LOWER\nF) CHECK IS POSITIVE OR NEGATIVE\nG) CHECK IF ODD/EVEN\nH) FIND ASCII VALUE FROM STRING\nI) FIND STRING FROM ASCII\nEnter your choice: ")
+    
     if choice == "A":
-        text=input("Enter a string: ")
-
+      text=input("Enter a string: ")
+    
     if choice == "B":
-        num=int(input("Enter an integer: "))
-
+      num=int(input("Enter an integer: "))
+    
     if choice == "C":
-        text=input("Enter a string: ")
-        for i in range(len(text)):
+      text=input("Enter a string: ")
+      for i in range(len(text)):
         print(text[i])
-
+    
     if choice == "D":
-        text=input("Enter a string: ")
-        for i in range(len(text)):
+      text=input("Enter a string: ")
+      for i in range(len(text)):
         print(text[i], "|", text[i].isalpha())
-
+  
     if choice == "E":
-        text = input("Enter a string: ")
-        for i in range(len(text)):
+      text = input("Enter a string: ")
+      for i in range(len(text)):
         if (text[i].isupper()):
-            print(text[i], "|", "Uppercase")
+          print(text[i], "|", "Uppercase")
         if (text[i].islower()):
-            print(text[i], "|", "Lowercase")
-
+          print(text[i], "|", "Lowercase")
+  
     if choice == "F":
-        val = int(input("Enter an integer: "))
-        if val > 0:
+      val = int(input("Enter an integer: "))
+      if val >0:
         print(val,"| Positive")
-        if val &lt; 0:
+      if val &lt; 0:
         print(val,"| Negative")
-        if val == 0:
+      if val == 0:
         print(val,"| Zero")
-
+  
     if choice == "G":
-        val = int(input("Enter an integer: "))
-        if val % 2 == 0:
+      val = int(input("Enter an integer: "))
+      if val % 2 == 0:
         print(val,"| Even")
-        if val % 2 != 0:
+      if val % 2 != 0:
         print(val,"| Odd")
         
     if choice == "H":
-        text = input("Enter a SINGLE letter: ")
-        print(ord(text))
-        print("Example: \n A", ord("A"), "\n a", ord("a"), "\n Z", 
-        ord("Z"), "\n z", ord("z"))
-
+      text = input("Enter a SINGLE letter: ")
+      print(ord(text))
+      print("Example: \n A", ord("A"), "\n a", ord("a"), "\n Z", ord("Z"), "\n z", ord("z"))
+  
     if choice == "I":
-        num = int(input("Enter a SINGLE number: "))
-        print(chr(num))
-        print("Example: \n 65", chr(65), "\n 97", chr(97), "\n90", 
-        chr(90), "\n 122", chr(122))</code></pre></blockquote>
+      num = int(input("Enter a SINGLE number: "))
+      print(chr(num))
+      print("Example: \n 65", chr(65), "\n 97", chr(97), "\n 90", chr(90), "\n 122", chr(122))</code></pre></blockquote>
         <p style="font-size:12px; margin-top: 0px;">Copy<button onclick="copyToClipboard('two')"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-copy" viewBox="0 0 16 16"><path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg></button>and click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>    
     </div>
 
