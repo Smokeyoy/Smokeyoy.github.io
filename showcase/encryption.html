@@ -238,32 +238,32 @@
     <p style="font-size: 15px; margin-top: 3px; color:#ffffffd4; padding-left: 20%; max-width: 60%;">This python code can encrypt and decrypt messages.</p>
 
     <div class="container"><blockquote><pre class="allow-select" style="margin:0px;"><code id="one">answer = input("(E) Encrypt Message\n(D) Decrypt Message\n(Q) Quit\nEnter your choice: ")
-        while (answer != "Q"):
-          message = input("Enter the message: ")
-          value = input("Enter the shift value: ")
-          if (answer == "E"):
-            ans = ""
-            for i in range(len(message)):
-              ch = message[i]
-              if ch==" ":
-                ans+=" "
-              elif ch.isupper():
-                ans += chr((ord(ch) + int(value) - 65) % 26 + 65)
-              else:
-                ans += chr((ord(ch) + int(value) - 97) % 26 + 97)
-            print("Encrypted message: " + ans)
-          elif (answer == "D"):
-            ans = ""
-            for i in range(len(message)):
-              ch = message[i]
-              if ch==" ":
-                ans+=" "
-              elif ch.isupper():
-                ans += chr((ord(ch) - int(value) - 65) % 26 + 65)
-              else:
-                ans += chr((ord(ch) - int(value) - 97) % 26 + 97)
-            print("Decrypted message: " + ans)
-          answer = input("(E) Encrypt Message\n(D) Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
+while (answer != "Q"):
+  message = input("Enter the message: ")
+  value = input("Enter the shift value: ")
+  if (answer == "E"):
+    ans = ""
+    for i in range(len(message)):
+      ch = message[i]
+      if ch==" ":
+        ans+=" "
+      elif ch.isupper():
+        ans += chr((ord(ch) + int(value) - 65) % 26 + 65)
+      else:
+        ans += chr((ord(ch) + int(value) - 97) % 26 + 97)
+    print("Encrypted message: " + ans)
+  elif (answer == "D"):
+    ans = ""
+    for i in range(len(message)):
+      ch = message[i]
+      if ch==" ":
+        ans+=" "
+      elif ch.isupper():
+        ans += chr((ord(ch) - int(value) - 65) % 26 + 65)
+      else:
+        ans += chr((ord(ch) - int(value) - 97) % 26 + 97)
+    print("Decrypted message: " + ans)
+  answer = input("(E) Encrypt Message\n(D) Decrypt Message\n(Q) Quit\nEnter your choice: ")</code></pre></blockquote>
       <p style="font-size:12px; margin-top: 0px;">Copy<button onclick="copyToClipboard('one')"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="white" class="bi bi-copy" viewBox="0 0 16 16"><path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg></button>and click <a style="color:#ff6893" href="https://www.online-python.com/" target="_blank">here</a> to test</p>    
     </div>
 
