@@ -11,7 +11,6 @@
             var text = document.getElementById(elmId).innerHTML;
             navigator.clipboard.writeText(text);
           }
-         
     </script>
     <style>
         html {
@@ -246,7 +245,7 @@
     currency = input("Enter secondary currency (GBP, EUR, JPY, CAD, IQD): ")
     return currency.lower(), decide
   
-  def amountConvert(index):
+def amountConvert(index):
     for group in currencyList:
       if currency == group[0]:
         name = group[3]
@@ -257,16 +256,16 @@
       amount = float(input("Enter the amount of "+ name +" to convert to Dollars: "))
       return (amount / index)
   
-  index = 0
-  name = ""
+index = 0
+name = ""
+
+currencyList = [["gbp", 0.76, "£", "Pounds"],
+              ["eur", 0.88, "€", "Euros"],
+              ["jpy", 113.53, "¥", "Yen"],
+              ["cad", 1.39, "C$", "Canadian Dollars"],
+              ["iqd",1309.68, "IQD", "Iraqi Dinars"]]
   
-  currencyList = [["gbp", 0.76, "£", "Pounds"],
-                  ["eur", 0.88, "€", "Euros"],
-                  ["jpy", 113.53, "¥", "Yen"],
-                  ["cad", 1.39, "C$", "Canadian Dollars"],
-                  ["iqd",1309.68, "IQD", "Iraqi Dinars"]]
-  
-  while True:
+while True:
     currency, decide = choice()
     for group in currencyList:
       if currency == group[0]:
