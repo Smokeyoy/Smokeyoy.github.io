@@ -183,9 +183,11 @@
             background-color: #ff689382;
             border-radius: 15px;
             padding: 20px;
+            max-width: 50%;
         }
         code{
             color:white;
+            text-wrap:wrap;
         }
         /* END BLOCKQUOTE */
        
@@ -278,16 +280,7 @@ while (answer != "Q"):
     <p style="font-size: 15px; margin: 3px; color:#ffffffd4;">This code segment uses loops and conditionals.</p>
     <div class="container">
 <blockquote><pre class="allow-select" style="margin:0px;"><code id="two">while True:
-    choice = input("\nA) STRING TO VARIABLE\n
-    B) INTEGER TO VARIABLE\n
-    C) LOOP OVER STRING CHARACTERS\n
-    D) CHECK IF LETTER\n
-    E) CHECK IF UPPER/LOWER\n
-    F) CHECK IS POSITIVE OR NEGATIVE\n
-    G) CHECK IF ODD/EVEN\n
-    H) FIND ASCII VALUE FROM STRING\n
-    I) FIND STRING FROM ASCII\n
-    Enter your choice: ")
+    choice = input("\nA) STRING TO VARIABLE\n B) INTEGER TO VARIABLE\n C) LOOP OVER STRING CHARACTERS\n D) CHECK IF LETTER\n E) CHECK IF UPPER/LOWER\n F) CHECK IS POSITIVE OR NEGATIVE\n G) CHECK IF ODD/EVEN\n H) FIND ASCII VALUE FROM STRING\n I) FIND STRING FROM ASCII\n Enter your choice: ")
 
     if choice == "A":
         text=input("Enter a string: ")
