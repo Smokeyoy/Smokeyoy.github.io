@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abby's Performance Task</title>
+    <link rel="stylesheet" href="styles.css">
     <script>
         function copyToClipboard(elmId) {
             var text = document.getElementById(elmId).innerHTML;
@@ -201,7 +202,8 @@
         svg:hover {
             fill: #ff6893;
             transition: 0.2s;
-            transform: scale(1.2); 
+            transform: scale(1.2);
+            cursor: pointer;
         }
 
         svg:not(:hover) {
